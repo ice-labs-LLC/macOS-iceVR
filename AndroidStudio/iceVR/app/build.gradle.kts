@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId = "com.icelabsLLC.iceVR"
         minSdk = 29
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

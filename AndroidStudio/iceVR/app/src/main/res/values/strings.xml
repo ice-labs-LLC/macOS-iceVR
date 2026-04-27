@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">iceVR</string>
+    <string name="ip_display">IP: %1$s</string>
 </resources>
