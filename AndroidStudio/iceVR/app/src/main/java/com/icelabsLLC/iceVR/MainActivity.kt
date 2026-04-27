@@ -17,13 +17,12 @@ class MainActivity : Activity() {
 
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
-        // Head-locked overlay layout
         val layout = FrameLayout(this).apply {
-            setBackgroundColor(0x00000000) // transparent
+            setBackgroundColor(0x00000000)
         }
 
         ipText = TextView(this).apply {
-            ipText.text = getString(R.string.ip_display, getLocalIpAddress())
+            text = getString(R.string.ip_display, getLocalIpAddress())
             textSize = 32f
             setTextColor(0xFFFFFFFF.toInt())
             setBackgroundColor(0xAA000000.toInt())

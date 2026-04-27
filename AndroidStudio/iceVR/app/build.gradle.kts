@@ -14,8 +14,8 @@ android {
         applicationId = "com.icelabsLLC.iceVR"
         minSdk = 29
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "27.0 Test 2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
