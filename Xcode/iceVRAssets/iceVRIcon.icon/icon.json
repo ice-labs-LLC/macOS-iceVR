@@ -1,0 +1,107 @@
+{
+  "fill" : {
+    "linear-gradient" : [
+      "srgb:1.00000,0.51290,0.00000,1.00000",
+      "extended-srgb:0.00000,0.53333,1.00000,1.00000"
+    ],
+    "orientation" : {
+      "start" : {
+        "x" : 0.5,
+        "y" : 0
+      },
+      "stop" : {
+        "x" : 0.5,
+        "y" : 0.7
+      }
+    }
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "glass" : true,
+          "image-name" : "second_vr.cb381e8.png",
+          "name" : "second_vr.cb381e8",
+          "position" : {
+            "scale" : 0.12,
+            "translation-in-points" : [
+              237.2059374999999,
+              184.31406249999998
+            ]
+          }
+        },
+        {
+          "glass" : true,
+          "image-name" : "pico4.png",
+          "name" : "pico4",
+          "position" : {
+            "scale" : 0.8,
+            "translation-in-points" : [
+              -190.5234375,
+              170.9140625
+            ]
+          }
+        },
+        {
+          "image-name" : "metaquest3s.png",
+          "name" : "metaquest3s",
+          "position" : {
+            "scale" : 0.75,
+            "translation-in-points" : [
+              221.30593750000003,
+              -86.375
+            ]
+          }
+        },
+        {
+          "image-name" : "Quest-3-Head-On-Compressed-Wide-1024x450.png",
+          "name" : "Quest-3-Head-On-Compressed-Wide-1024x450",
+          "position" : {
+            "scale" : 0.5,
+            "translation-in-points" : [
+              -190.2734375,
+              -100.5
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "image-name" : "icevrtext.png",
+          "name" : "icevrtext",
+          "position" : {
+            "scale" : 5.67,
+            "translation-in-points" : [
+              53.86500000000001,
+              -329.265625
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
