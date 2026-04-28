@@ -7,12 +7,12 @@
 
     <application
         android:label="iceVR"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.IceVR">
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="landscape"
             android:configChanges="orientation|screenSize|keyboardHidden">
 
             <intent-filter>
@@ -21,12 +21,8 @@
                 <category android:name="com.oculus.intent.category.VR" />
             </intent-filter>
 
-            <!-- Meta Quest -->
             <meta-data android:name="com.oculus.supportedDevices"
                 android:value="quest2|questpro|quest3|quest3s" />
-
-            <!-- Pico -->
-            <meta-data android:name="pvr.app.type" android:value="vr" />
 
         </activity>
     </application>
