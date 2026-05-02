@@ -1,0 +1,4 @@
+To use the Meta Spatial SDK (you only have to do this when building) put this in "local.properties":
+gpr.user=YOUR_GITHUB_USERNAME
+gpr.key=YOUR_GITHUB_TOKEN
+(obv replace "YOUR_GITHUB_TOKEN" and "YOUR_GITHUB_USERNAME" with your GitHub stuff.)

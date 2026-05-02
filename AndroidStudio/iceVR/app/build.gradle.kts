@@ -42,4 +42,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    implementation("com.meta.spatial:meta-spatial-sdk:0.12.0")
+    implementation("com.meta.spatial:meta-spatial-sdk-ovrmetrics:0.12.0")
+
 }

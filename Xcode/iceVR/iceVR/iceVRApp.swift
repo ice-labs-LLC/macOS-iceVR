@@ -23,8 +23,10 @@ private struct AboutCommands: Commands {
  
     var body: some Commands {
         CommandGroup(replacing: .appInfo) {
-            Button("About iceVR") {
+            Button {
                 openWindow(id: "about-icevr")
+            } label: {
+                Label("About iceVR", systemImage: "info.circle")
             }
         }
     }
@@ -65,7 +67,7 @@ private struct AboutView: View {
                     .tracking(4)
                     .foregroundStyle(Color.white.opacity(0.9))
  
-                Text("Custom About screen for the macOS app menu while the Quest and Pico linking flow is still under construction.")
+                Text("UNDER CONSTRUCTION.")
                     .multilineTextAlignment(.center)
                     .foregroundStyle(Color.white.opacity(0.82))
                     .frame(maxWidth: 360)

@@ -2,11 +2,9 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("questAddress") private var savedQuestAddress = ""
-    @AppStorage("picoAddress") private var savedPicoAddress = ""
 
     @State private var questAddress = ""
-    @State private var picoAddress = ""
-    @State private var statusMessage = "Enter any Quest or Pico target for now. Validation and real device linking can come later."
+    @State private var statusMessage = "Enter any Quest target for now. Validation and real device linking can come later."
 
     var body: some View {
         ZStack {
@@ -27,7 +25,7 @@ struct ContentView: View {
                         .font(.system(size: 52, weight: .black, design: .rounded))
                         .foregroundStyle(.white)
 
-                    Text("Quest & Pico Link Setup")
+                    Text("Quest Link Setup")
                         .font(.title2.weight(.bold))
                         .foregroundStyle(Color.white.opacity(0.95))
 
@@ -44,14 +42,6 @@ struct ContentView: View {
                         savedValue: savedQuestAddress,
                         saveAction: saveQuest
                     )
-
-                    linkField(
-                        title: "Pico IP",
-                        prompt: "192.168.1.22 or any placeholder text",
-                        text: $picoAddress,
-                        savedValue: savedPicoAddress,
-                        saveAction: savePico
-                    )
                 }
 
                 VStack(alignment: .leading, spacing: 12) {
@@ -63,14 +53,9 @@ struct ContentView: View {
                         .foregroundStyle(Color.white.opacity(0.82))
                         .fixedSize(horizontal: false, vertical: true)
 
-                    if !savedQuestAddress.isEmpty || !savedPicoAddress.isEmpty {
+                    if !savedQuestAddress.isEmpty {
                         VStack(alignment: .leading, spacing: 6) {
-                            if !savedQuestAddress.isEmpty {
-                                Text("Saved Quest target: \(savedQuestAddress)")
-                            }
-                            if !savedPicoAddress.isEmpty {
-                                Text("Saved Pico target: \(savedPicoAddress)")
-                            }
+                            Text("Saved Quest target: \(savedQuestAddress)")
                         }
                         .font(.subheadline)
                         .foregroundStyle(Color.white.opacity(0.92))
@@ -92,7 +77,6 @@ struct ContentView: View {
         .frame(minWidth: 900, minHeight: 560)
         .onAppear {
             questAddress = savedQuestAddress
-            picoAddress = savedPicoAddress
         }
     }
 
@@ -135,14 +119,6 @@ struct ContentView: View {
         guard !trimmedAddress.isEmpty else { return }
 
         savedQuestAddress = trimmedAddress
-        statusMessage = "Quest placeholder target saved as '\(trimmedAddress)'."
-    }
-
-    private func savePico() {
-        let trimmedAddress = picoAddress.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmedAddress.isEmpty else { return }
-
-        savedPicoAddress = trimmedAddress
-        statusMessage = "Pico placeholder target saved as '\(trimmedAddress)'."
+        statusMessage = "Quest target saved as '\(trimmedAddress)'."
     }
 }

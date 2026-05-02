@@ -19,9 +19,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://maven.pkg.github.com/meta-quest/Meta-Spatial-SDK-Samples") }
     }
 }
 
 rootProject.name = "iceVR"
 include(":app")
- 
